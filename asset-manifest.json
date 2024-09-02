@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.5de35250.css",
-    "main.js": "/my-portfolio/static/js/main.d7fb1632.js",
-    "static/js/453.41811d64.chunk.js": "/my-portfolio/static/js/453.41811d64.chunk.js",
-    "static/media/pfp.jpg": "/my-portfolio/static/media/pfp.6d0879a562bf4e8fca75.jpg",
-    "index.html": "/my-portfolio/index.html",
-    "main.5de35250.css.map": "/my-portfolio/static/css/main.5de35250.css.map",
-    "main.d7fb1632.js.map": "/my-portfolio/static/js/main.d7fb1632.js.map",
-    "453.41811d64.chunk.js.map": "/my-portfolio/static/js/453.41811d64.chunk.js.map"
+    "main.css": "/muminelsayed.github.io/static/css/main.5de35250.css",
+    "main.js": "/muminelsayed.github.io/static/js/main.b97c2195.js",
+    "static/js/453.41811d64.chunk.js": "/muminelsayed.github.io/static/js/453.41811d64.chunk.js",
+    "static/media/pfp.jpg": "/muminelsayed.github.io/static/media/pfp.6d0879a562bf4e8fca75.jpg",
+    "index.html": "/muminelsayed.github.io/index.html",
+    "main.5de35250.css.map": "/muminelsayed.github.io/static/css/main.5de35250.css.map",
+    "main.b97c2195.js.map": "/muminelsayed.github.io/static/js/main.b97c2195.js.map",
+    "453.41811d64.chunk.js.map": "/muminelsayed.github.io/static/js/453.41811d64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5de35250.css",
-    "static/js/main.d7fb1632.js"
+    "static/js/main.b97c2195.js"
   ]
 }
