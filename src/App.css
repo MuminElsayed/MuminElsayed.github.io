@@ -15,3 +15,18 @@
 .align-items-center{
   align-items: center;
 }
+.justify-content-center{
+  justify-content: center;
+}
+.justify-content-space-between{
+  justify-content: space-between;
+}
+.gap-m{
+  gap: 16px;
+}
+.gap-l{
+  gap: 24px;
+}
+.gap-xl{
+  gap: 32px;
+}
