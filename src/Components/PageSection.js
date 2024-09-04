@@ -1,12 +1,10 @@
-import ImagePreview from "./QuadImagePreview"
+import React, { forwardRef } from 'react';
+import ImagePreview from "./QuadImagePreview";
 
-function PageSection({height, children, imageUrl}){
+const PageSection = forwardRef(({ children, className = "" }, ref) => {
     return (
-        <div className="display-flex align-items-center justify-content-space-between">
-            <div className="display-flex align-items-center" style={{height:height}}>{children}</div>
-            <ImagePreview imageUrl1={imageUrl} imageUrl2={imageUrl} imageUrl3={imageUrl} imageUrl4={imageUrl}/>
-        </div>
-    )
-}
+        <div ref={ref} className={"padding-top-xxxl " + className} style={{ minHeight: "100vh" }}>{children}</div>
+    );
+});
 
-export default PageSection
+export default PageSection;

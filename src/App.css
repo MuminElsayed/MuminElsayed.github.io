@@ -1,7 +1,6 @@
 .App{
   background-color: #080808;
   color: white;
-  height: 100vh;
 }
 .round-bottom-border{
   border-radius:0 0 10px 10px;
@@ -29,4 +28,13 @@
 }
 .gap-xl{
   gap: 32px;
+}
+.gap-xxl{
+  gap: 64px;
+}
+.padding-top-xxxl{
+  padding-top: 128px;
+}
+.light-section{
+  background-color: aliceblue;
 }

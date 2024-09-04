@@ -1,31 +1,55 @@
+import React, { useRef } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import Navbar from './Components/Navbar';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, useForkRef } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import IframePreview from './Components/IframePreview';
 import PageSection from './Components/PageSection';
 import MyPfp from './Assets/pfp.jpg'
 import ImagePreview from './Components/QuadImagePreview';
+import userEvent from '@testing-library/user-event';
 
 function App() {
+
+  const homeRef = useRef(null);
+  const workRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const PAGES = [
+    { name: "Home", ref: homeRef },
+    { name: "My Work", ref: workRef },
+    { name: "Contact", ref: contactRef }
+  ];
+
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Container>
         <Navbar pages={PAGES}></Navbar>
-        <PageSection height={"700px"} imageUrl={MyPfp}>
-          <div className='display-flex align-items-center'>
+        <PageSection ref={homeRef}>
+        <Container>
+          <div className='display-flex align-items-center justify-content-center gap-xxl'>
             <div className='display-flex flex-direction-column' style={{ width:'30vw'}}>
               <Typography variant='h2'>Mumin Hemayed</Typography>
               <Typography variant='subtitle'>I like to make stuff, proficient in anything related to tech. Recognized quick learner, and unique problem solver. A well-rounded individual with excellent work ethic and a natural leader that strives for efficiency and making things better.</Typography>
             </div>
+            <ImagePreview imageUrl1={MyPfp} imageUrl2={MyPfp} imageUrl3={MyPfp} imageUrl4={MyPfp} />
           </div>
+          </Container>
         </PageSection>
-        <PageSection className={"light-section"} height={"700px"} imageUrl={MyPfp}></PageSection>
-            {/* <IframePreview title="Table" url="https://axosbank-dev-sentry.outsystemsenterprise.com/MuminTestApp/table"></IframePreview> */}
-            {/* <iframe style={{width:'100%', height:'500px'}} src="https://axosbank-dev-sentry.outsystemsenterprise.com/axos_reactive_lsg"/> */}
-        </Container>
+        <ThemeProvider theme={lightTheme}>
+          <PageSection ref={workRef} className={"light-section"}>
+            <Container>
+              <IframePreview title="Table" description={"A table that supports drag and drop, tree grid, bulk/single select, column toggle & reordering, resizing, sorting, search, filtering, pagination. Built from scratch using the Outsystems framework based on React."} url={"https://axosbank-dev-sentry.outsystemsenterprise.com/MuminTestApp/table"}></IframePreview>
+            </Container>
+          </PageSection>
+        </ThemeProvider>
+        <PageSection ref={contactRef}>
+          <Container>
+            <Typography variant="h4">Let's Get in Touch!</Typography>
+
+          </Container>
+        </PageSection>
       </ThemeProvider>
     </div>
   );
@@ -33,10 +57,6 @@ function App() {
 
 export default App;
 
-const PAGES = [
-  { name: "Home", url: "/my-portfolio" },
-  { name: "About", url: "/about" }
-];
 
 const theme = createTheme({
   palette: {
@@ -51,6 +71,35 @@ const theme = createTheme({
       light: '#FFFFFF',
       dark: '#1B1B1B',
       contrastText: '#080808',
+    },
+  },
+});
+
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#FFFFFF', // Light background
+      light: '#F5F5F5', // Slightly darker light color
+      dark: '#CCCCCC', // Darker shade for contrast
+      contrastText: '#1B1B1B', // Dark text for readability
+    },
+    secondary: {
+      main: '#1B1B1B', // Darker secondary color
+      light: '#333333', // Slightly lighter dark color
+      dark: '#080808', // Darkest shade
+      contrastText: '#FFFFFF', // Light text for readability
+    },
+  },
+  typography: {
+    h2: {
+      color: '#1B1B1B', // Dark text for headings
+    },
+    subtitle: {
+      color: '#333333', // Slightly lighter dark text for subtitles
+    },
+    h4: {
+      color: '#1B1B1B', // Dark text for headings
     },
   },
 });

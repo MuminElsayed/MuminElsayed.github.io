@@ -4,3 +4,11 @@
   box-sizing: border-box;
   font-family: "Roboto";
 }
+iframe{
+  border-width: 0;
+}
+header{
+  max-width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
