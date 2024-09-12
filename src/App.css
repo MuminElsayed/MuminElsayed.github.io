@@ -5,6 +5,7 @@
 .round-bottom-border{
   border-radius:0 0 10px 10px;
 }
+/* Flex */
 .display-flex{
   display: flex;
 }
@@ -20,6 +21,10 @@
 .justify-content-space-between{
   justify-content: space-between;
 }
+/* Gap */
+.gap-s{
+  gap: 8px;
+}
 .gap-m{
   gap: 16px;
 }
@@ -32,9 +37,51 @@
 .gap-xxl{
   gap: 64px;
 }
+/* Padding */
 .padding-top-xxxl{
   padding-top: 128px;
 }
 .light-section{
   background-color: aliceblue;
+}
+/* Components */
+/* Input */
+input{
+  height: 40px;
+  width: 100%;
+  max-width: 350px;
+  padding: 2px 12px;
+}
+input::placeholder,
+textarea::placeholder{
+  color: #757575;
+}
+/* Text Area */
+textarea{
+  padding: 12px;
+  resize: vertical;
+}
+/* Links */
+a{
+  color: #D0E6FF;
+}
+/* Buttons */
+button{
+  min-height: 40px;
+  background-color: #3F8E00;
+  border: 1px solid #62BA1B;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #3b8201;
+}
+button:active{
+  background-color: #306801;
+}
+/* SVGs */
+path{
+  color: white;
 }
