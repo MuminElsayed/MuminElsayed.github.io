@@ -66,7 +66,10 @@ function App() {
             </Container>
           </PageSection>
         </ThemeProvider>
-        <PageSection ref={contactRef}>
+        <PageSection
+          ref={contactRef}
+          className="display-flex flex-direction column align-items-center"
+        >
           <Container>
             <GetInTouch></GetInTouch>
           </Container>

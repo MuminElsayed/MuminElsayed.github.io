@@ -6,7 +6,7 @@ const PageSection = forwardRef(({ children, className = "" }, ref) => {
     <div
       ref={ref}
       className={"padding-top-xxxl " + className}
-      style={{ minHeight: "900px", height: "100vh" }}
+      style={{ minHeight: "700px", height: "100vh" }}
     >
       {children}
     </div>
