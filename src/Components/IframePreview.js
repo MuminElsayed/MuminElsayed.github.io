@@ -9,11 +9,13 @@ function IframePreview({ title, description, url }) {
       <Typography variant="h6" color="secondary">
         {description}
       </Typography>
-      <iframe
-        title={url}
-        style={{ width: "100%", height: "300px" }}
-        src={url}
-      />
+      {url !== "" && (
+        <iframe
+          title={url}
+          style={{ width: "100%", height: "300px" }}
+          src={url}
+        />
+      )}
     </div>
   );
 }

@@ -66,6 +66,18 @@ function App() {
             </Container>
           </PageSection>
         </ThemeProvider>
+        <ThemeProvider theme={lightTheme}>
+          <PageSection className={"light-section"}>
+            <Container>
+              <IframePreview
+                title="More Work Added Soon!"
+                description={
+                  "I will be adding more custom UI elements, snippets of my .NET projects, and highlights of games, all developed by yours truly."
+                }
+              ></IframePreview>
+            </Container>
+          </PageSection>
+        </ThemeProvider>
         <PageSection
           ref={contactRef}
           className="display-flex flex-direction column align-items-center"
