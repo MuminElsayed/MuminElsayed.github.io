@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Navbar pages={PAGES}></Navbar>
-        <PageSection ref={homeRef}>
+        <PageSection ref={homeRef} style={{ minHeight: "700px" }}>
           <Container>
             <div className="display-flex align-items-center justify-content-center gap-xxl">
               <div
@@ -65,8 +65,34 @@ function App() {
               ></IframePreview>
             </Container>
           </PageSection>
-        </ThemeProvider>
-        <ThemeProvider theme={lightTheme}>
+          <PageSection className={"light-section"}>
+            <Container>
+              <IframePreview
+                title="Dropdown"
+                description={
+                  "A dropdown field with 4 different variations (text, single select, multi select, navigation) & supports keyboard interactions."
+                }
+                url={
+                  "https://axosbank-dev-sentry.outsystemsenterprise.com/MuminTestApp/dropdown"
+                }
+                height="650px"
+              ></IframePreview>
+            </Container>
+          </PageSection>
+          <PageSection className={"light-section"}>
+            <Container>
+              <IframePreview
+                title="Input Fields"
+                description={
+                  "Various complex input fields such as a create password input with instant validation, and a color picker tool with an integrated eyedropper API."
+                }
+                url={
+                  "https://axosbank-dev-sentry.outsystemsenterprise.com/MuminTestApp/input"
+                }
+                height="800px"
+              ></IframePreview>
+            </Container>
+          </PageSection>
           <PageSection className={"light-section"}>
             <Container>
               <IframePreview
@@ -80,7 +106,7 @@ function App() {
         </ThemeProvider>
         <PageSection
           ref={contactRef}
-          className="display-flex flex-direction column align-items-center"
+          className="display-flex flex-direction column align-items-center padding-xl"
         >
           <Container>
             <GetInTouch></GetInTouch>

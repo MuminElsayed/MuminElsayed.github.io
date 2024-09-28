@@ -41,6 +41,9 @@
 .padding-top-xxxl{
   padding-top: 128px;
 }
+.padding-xl{
+  padding: 64px;
+}
 .light-section{
   background-color: aliceblue;
 }
