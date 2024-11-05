@@ -2,13 +2,12 @@ import React, { useRef } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import { Container, Typography, useForkRef } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import IframePreview from "./Components/IframePreview";
 import PageSection from "./Components/PageSection";
 import MyPfp from "./Assets/pfp.jpg";
 import ImagePreview from "./Components/QuadImagePreview";
-import userEvent from "@testing-library/user-event";
 import GetInTouch from "./Components/GetInTouch";
 
 function App() {
@@ -28,11 +27,8 @@ function App() {
         <Navbar pages={PAGES}></Navbar>
         <PageSection ref={homeRef} style={{ minHeight: "700px" }}>
           <Container>
-            <div className="display-flex align-items-center justify-content-center gap-xxl">
-              <div
-                className="display-flex flex-direction-column"
-                style={{ width: "30vw" }}
-              >
+            <div className="display-flex align-items-center justify-content-center gap-xxl profile-header">
+              <div className="display-flex flex-direction-column">
                 <Typography variant="h2">Mumin Hemayed</Typography>
                 <Typography variant="subtitle">
                   I like to make stuff, proficient in anything related to tech.

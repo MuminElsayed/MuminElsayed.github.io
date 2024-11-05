@@ -3,7 +3,11 @@ import MyLinksIcons from "./MyLinksIcons";
 
 function Navbar({ pages }) {
   return (
-    <AppBar className="round-bottom-border" position="sticky" color="primary">
+    <AppBar
+      className="round-bottom-border navbar"
+      position="sticky"
+      color="primary"
+    >
       <Toolbar
         style={{
           display: "flex",

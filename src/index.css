@@ -1,14 +1,33 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
 }
-iframe{
+iframe {
   border-width: 0;
 }
-header{
+header {
   max-width: 75vw;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 800px) {
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  .profile-header > div:first-child {
+    order: 2;
+  }
+  .profile-header .gallery > img {
+    width: 250px;
+  }
+  div.icon-bar {
+    gap: 8px;
+  }
+  .navbar > div {
+    gap: 6px;
+  }
 }

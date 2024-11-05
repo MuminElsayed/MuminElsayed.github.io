@@ -1,5 +1,4 @@
 import React, { forwardRef } from "react";
-import ImagePreview from "./QuadImagePreview";
 
 const PageSection = forwardRef(({ children, style, className = "" }, ref) => {
   return (
