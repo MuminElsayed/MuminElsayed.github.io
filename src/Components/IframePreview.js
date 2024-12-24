@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 
-function IframePreview({ title, description, url, height = "300px" }) {
+function IframePreview({ title, description, url = "", height = "300px" }) {
   return (
     <div className="display-flex flex-direction-column gap-m">
       <Typography variant="h4" color="secondary">

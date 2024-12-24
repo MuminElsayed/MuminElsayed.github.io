@@ -7,6 +7,7 @@ import { createTheme } from "@mui/material/styles";
 import IframePreview from "./Components/IframePreview";
 import PageSection from "./Components/PageSection";
 import MyPfp from "./Assets/pfp.jpg";
+import webviewImg from "./Assets/webview_demo.png";
 import ImagePreview from "./Components/QuadImagePreview";
 import GetInTouch from "./Components/GetInTouch";
 
@@ -64,6 +65,19 @@ function App() {
           <PageSection className={"light-section"}>
             <Container>
               <IframePreview
+                title="Webview Mobile Embedding"
+                description={
+                  "Seamlessly embedded a website into a mobile app as a webview in Xamarin/Maui, with secure two-way communication set up to transfer data, using a JavaScript to C# bridge, event handlers, and a custom renderer for Android/IOS."
+                }
+              ></IframePreview>
+              <div className="display-flex align-items-center justify-content-center padding-xl">
+                <img src={webviewImg} alt="webviewDemo" height={"550px"} />
+              </div>
+            </Container>
+          </PageSection>
+          <PageSection className={"light-section"}>
+            <Container>
+              <IframePreview
                 title="Dropdown"
                 description={
                   "A dropdown field with 4 different variations (text, single select, multi select, navigation) & supports keyboard interactions."
@@ -89,7 +103,7 @@ function App() {
               ></IframePreview>
             </Container>
           </PageSection>
-          <PageSection className={"light-section"}>
+          {/* <PageSection className={"light-section"}>
             <Container>
               <IframePreview
                 title="More Work Added Soon!"
@@ -98,7 +112,7 @@ function App() {
                 }
               ></IframePreview>
             </Container>
-          </PageSection>
+          </PageSection> */}
         </ThemeProvider>
         <PageSection
           ref={contactRef}
